@@ -5,91 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
-            background-size: 400% 400%;
-            animation: gradientBackground 10s ease infinite;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-family: 'Comic Sans MS', cursive;
-            text-align: center;
-        }
-
-        @keyframes gradientBackground {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .message {
-            font-size: 2rem;
-            margin: 17px;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-            animation: popIn 2s ease;
-        }
-
-        @keyframes popIn {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .cartoon {
-            margin-top: 100px;
-            width: 200px;
-            animation: dance 1s infinite alternate ease-in-out;
-        }
-
-        @keyframes dance {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            100% {
-                transform: translateY(-20px) rotate(10deg);
-            }
-        }
-
-        .ball {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: fall 5s linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100vh) translateX(0);
-            }
-
-            100% {
-                transform: translateY(100vh) translateX(calc(100vw - 20px));
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -99,25 +15,7 @@
     <img src="cartoon.png" alt="Dancing Cartoon" class="cartoon">
     <h1>ADEWALE EZEKIEL SENDS GREETINGS (Hardelz)</h1>
 
-    <script>
-        function createBalls() {
-            for (let i = 0; i < 50; i++) {
-                const ball = document.createElement('div');
-                ball.classList.add('ball');
-                ball.style.left = `${Math.random() * 100}vw`;
-                ball.style.animationDuration = `${Math.random() * 3 + 2}s`;
-                ball.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
-                document.body.appendChild(ball);
-
-                ball.addEventListener('animationend', () => {
-                    ball.remove();
-                });
-            }
-        }
-
-        setInterval(createBalls, 1000);
-        createBalls();
-    </script>
+    <script src="sacript.js"></script>
 </body>
 
 </html>
